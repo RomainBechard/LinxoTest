@@ -1,4 +1,4 @@
-package com.romainbechard.linxotest.ui.main
+package com.romainbechard.linxotest.ui.photos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,19 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.romainbechard.linxotest.databinding.MainFragmentBinding
+import com.romainbechard.linxotest.R
+import com.romainbechard.linxotest.databinding.PhotosFragmentBinding
 
-class MainFragment : Fragment() {
+class PhotosFragment : Fragment() {
 
-    private lateinit var binding: MainFragmentBinding
-    private val mainViewModel by viewModels<MainViewModel>()
+    private lateinit var binding: PhotosFragmentBinding
+    private val photoViewModel by viewModels<PhotosViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = MainFragmentBinding.inflate(layoutInflater, container, false).apply {
-            viewModel = mainViewModel
+        binding = PhotosFragmentBinding.inflate(layoutInflater, container, false).apply {
+            viewModel = photoViewModel
         }
         return binding.root
     }
