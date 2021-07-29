@@ -26,9 +26,9 @@ class LinxoTestApplication : Application() {
         )
         .client(
             OkHttpClient().newBuilder()
-                .addInterceptor(
-                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-                )
+//                .addInterceptor(
+//                    HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+//                )
                 .build()
         )
         .build()
